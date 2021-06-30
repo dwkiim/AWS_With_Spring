@@ -7,10 +7,12 @@ branches:
     - master
 
 # Travis CI 서버의 Home
+before_install:
+  - chmod +x gradlew
 cache:
   directories:
-    - $HOME/.m2/repository
-    - $HOME/.gradle
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
 
 script: "./gradlew clean build"
 
